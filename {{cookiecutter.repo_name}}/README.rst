@@ -37,6 +37,11 @@ Quickstart
         ...
     )
 
+3. Then sync and/or migrate::
+
+    python manage.py syncdb
+    python manage.py migrate
+
 Features
 --------
 
