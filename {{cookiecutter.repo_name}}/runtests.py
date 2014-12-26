@@ -5,18 +5,20 @@ try:
 
     settings.configure(
         DEBUG=True,
+        LANGUAGE_CODE='en-us',
         USE_TZ=True,
         DATABASES={
-            "default": {
-                "ENGINE": "django.db.backends.sqlite3",
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': '{{ cookiecutter.app_name }}',
             }
         },
-        ROOT_URLCONF="{{ cookiecutter.app_name }}.urls",
+        ROOT_URLCONF='{{ cookiecutter.app_name }}.urls',
         INSTALLED_APPS=[
-            "django.contrib.auth",
-            "django.contrib.contenttypes",
-            "django.contrib.sites",
-            "{{ cookiecutter.app_name }}",
+            'django.contrib.auth',
+            'django.contrib.contenttypes',
+            'django.contrib.sites',
+            '{{ cookiecutter.app_name }}',
         ],
         SITE_ID=1,
         NOSE_ARGS=['-s'],
@@ -34,7 +36,7 @@ try:
 except ImportError:
     import traceback
     traceback.print_exc()
-    raise ImportError("To fix this error, run: pip install -r requirements-test.txt")
+    raise ImportError('To fix this error, run: pip install -r requirements-test.txt')
 
 
 def run_tests(*test_args):
