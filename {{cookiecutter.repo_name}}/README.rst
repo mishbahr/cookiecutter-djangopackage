@@ -22,14 +22,20 @@
 
 {{ cookiecutter.project_short_description}}
 
+Features
+--------
+
+* TODO
+
+
 Quickstart
 ----------
 
-1. Install `{{ cookiecutter.project_name }}`::
+1. Install ``{{ cookiecutter.project_name }}``::
 
     pip install {{ cookiecutter.repo_name }}
 
-2. Add `{{ cookiecutter.app_name}}` to `INSTALLED_APPS`::
+2. Add ``{{ cookiecutter.app_name}}`` to ``INSTALLED_APPS``::
 
     INSTALLED_APPS = (
         ...
@@ -37,15 +43,9 @@ Quickstart
         ...
     )
 
-3. Then sync and/or migrate::
+3. Sync database (requires south>=1.0.1 if you are using Django 1.6.x):::
 
-    python manage.py syncdb
     python manage.py migrate
-
-Features
---------
-
-* TODO
 
 Documentation
 -------------
