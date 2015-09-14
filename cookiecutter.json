@@ -7,6 +7,6 @@
   "app_name": "djpackage",
   "project_short_description": "Your project description goes here",
   "release_date": "2015-06-01",
-  "year": "{{ cookiecutter.now[:4] }",
+  "year": "{{ cookiecutter.now[:4] }}",
   "version": "0.1.0"
 }
